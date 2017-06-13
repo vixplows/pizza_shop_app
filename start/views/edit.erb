@@ -1,0 +1,28 @@
+<p>Current Order:</p>
+
+<p>First name: <%= @pizza.first_name() %></p>
+<p>Last name: <%= @pizza.last_name() %></p>
+<p>Quantity: <%= @pizza.quantity() %></p>
+<p>Topping: <%= @pizza.topping() %></p>
+
+<p> Amend Order: <p>
+
+<form method="post" action="/pizzas/<%= @pizza.id %>/update">
+  <label for="first-name">First Name:</label>
+  <input id="first-name" type="text" name="first_name">
+
+  <label for="last-name">Last Name:</label>
+  <input id="last-name" type="text" name="last_name">
+
+  <label for="pizza-select">Select a pizza!</label>
+  <select id="pizza-select" name="topping">
+    <option value="Margaherita">Margaherita</option>
+    <option value="Veggie Special">Veggie Special</option>
+    <option value="Mushroom">Mushroom</option>
+  </select>
+
+  <label for="quantity">Quantity</label>
+  <input id="quantity" type="number" name="quantity">
+
+  <input type="submit" value="Update Order">
+</form>

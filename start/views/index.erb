@@ -1,0 +1,12 @@
+<h1>"all the pizzas in the all the world"</h1>
+
+<!-- creating a for loop to go though ruby object data type array and pull out each element want to display in browser (@pizzas.each is like the 'for loop', do |pizza| is the 'for pizzas (i.e. each element in the array) in @pizzas' bit) <hr> = horizontal line. <p><a href=""></a></p> to be more dynamic and point to id put in pizza.id = the instance variable id for pizza, needs to be inside the ice-cream cones-->
+<% @pizzas.each do |pizza| %>
+  <p>Name: <%= pizza.pretty_name() %></p>
+  <p>Order: <%= pizza.quantity() %> x <%= pizza.topping() %></p>
+  <p><a href="/pizzas/<%= pizza.id %>">SHOW ORDER</a></p>
+  <form method="post" action="/pizzas/<%= pizza.id %>/delete">
+    <input type="submit" value="Delete Order">
+  </form>
+  <hr>
+<% end %>

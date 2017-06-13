@@ -1,0 +1,21 @@
+<!-- labels mean that it will highlight the input box - an accessiblity / user thing - the id is what links the label to the input. Selet tag = a drop down menu.
+The names attribute is what is set as the key in the params hash therefore they much attributes name in initialize-->
+<form method="post" action="/pizzas">
+  <label for="first-name">First Name:</label>
+  <input id="first-name" type="text" name="first_name">
+
+  <label for="last-name">Last Name:</label>
+  <input id="last-name" type="text" name="last_name">
+
+  <label for="pizza-select">Select a pizza!</label>
+  <select id="pizza-select" name="topping">
+    <option value="Margaherita">Margaherita</option>
+    <option value="Veggie Special">Veggie Special</option>
+    <option value="Mushroom">Mushroom</option>
+  </select>
+
+  <label for="quantity">Quantity</label>
+  <input id="quantity" type="number" name="quantity">
+
+  <input type="submit" value="Order Pizza">
+</form>
